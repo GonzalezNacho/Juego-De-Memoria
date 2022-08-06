@@ -55,12 +55,12 @@ function verificarConcidencia(boton1, boton2) {
         incrementarAciertos();
         rigthAudio.play();
     } else {
+        wrongAudio.play();
         setTimeout(()=>{
             boton1.innerHTML = ' ';
             boton1.disabled = false;
             boton2.innerHTML = ' ';
             boton2.disabled = false;
-            wrongAudio.play();
         },800);    
     }
 }
