@@ -42,6 +42,8 @@ h1{
     font-family: tittleFontMario;
     font-size: xx-large;
     text-align: center;
+    color: red;
+    text-shadow: #fff 2px 2px 1px ;
 }
 
 button {
@@ -83,4 +85,57 @@ a{
 
 img {
     width: 80%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal_container{
+    color: black;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.modal_container h2 {
+    margin: auto;
+}
+
+.modal_container img {
+    width: 30%;
+    margin: auto;
+}
+
+.modalReiniciar {
+    margin: auto;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f26250;
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color .3s;
+}
+
+.modalReiniciar:hover {
+    color: #f26250;
+    background-color: #fff;
 }
