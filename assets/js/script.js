@@ -29,7 +29,7 @@ function destapar(boton) {
 
     tarjetasDestapadas++;
     console.log(boton.id);
-    boton.innerHTML = `<img src="/assets/img/${numeros[boton.id]}.png" alt="asd">`;
+    boton.innerHTML = `<img src="/assets/img/${numeros[boton.id]}.png" alt="">`;
     boton.disabled = true;
 
     if (tarjetasDestapadas == 1) {
@@ -54,8 +54,8 @@ function incrementarMovimientos() {
 
 function verificarConcidencia(boton1, boton2) {
     if (primerResultado == segundoResultado) {
-        incrementarAciertos();
         rigthAudio.play();
+        incrementarAciertos();
     } else {
         wrongAudio.play();
         setTimeout(()=>{
@@ -72,9 +72,9 @@ function incrementarAciertos() {
     aciertosHtml = document.getElementById('cantAciertos');
     aciertosHtml.innerHTML = aciertos;
     if (aciertos == 8){
-        alert("Ganaste");
-        clearInterval(cuentaRegresiva);
         winAudio.play();
+        clearInterval(cuentaRegresiva);
+        alert("Ganaste");
     }
 }
 
@@ -113,14 +113,14 @@ function reiniciarJuego() {
         botonesHtml[boton].innerHTML = ``;
     }
     tarjetasDestapadas = 0;
-    primerResultado = null;
+    /*primerResultado = null;
     segundoResultado = null;
     tarjeta1 = null;
-    tarjeta2 = null;
+    tarjeta2 = null;*/
     movimientos = 0;
     aciertos = 0;
     temporizador = false;
     timer = 30;
-    cuentaRegresiva = null;
+    /*cuentaRegresiva = null;*/
     numeros.sort(()=>{return Math.random()-0.5});
 }
