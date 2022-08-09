@@ -1,8 +1,8 @@
-/* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}*/
+}
 
 @font-face {
     font-family: myFontMario;
@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: tittleFontMario;
-    src: url("/assets/font/Super\ Mario\ Bros..ttf");
+    src: url("/assets/font/SuperMario256.ttf");
 }
 
 body {
@@ -43,7 +43,7 @@ h1{
     font-size: xx-large;
     text-align: center;
     color: red;
-    text-shadow: #fff 2px 2px 1px ;
+    text-shadow: black 2px 4px 1px ;
 }
 
 button {
@@ -76,11 +76,20 @@ button:hover {
 }
 
 footer{
+    background-color: #111111bd;
+    color: rgb(241, 106, 11);
     text-align: center;
+    text-shadow: black 2px 2px 2px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4%;
 }
 
 a{
+    color: white;
     text-decoration: none;
+    text-shadow: black 1px 1px 1px;
 }
 
 img {
@@ -114,17 +123,16 @@ img {
     border-radius: 6px;
 }
 
-.modal_container h2 {
-    margin: auto;
+.modal_container * {
+    margin: 3% auto;
 }
+
 
 .modal_container img {
     width: 30%;
-    margin: auto;
 }
 
 .modalReiniciar {
-    margin: auto;
     text-decoration: none;
     color: #fff;
     background-color: #f26250;

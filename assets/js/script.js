@@ -74,7 +74,7 @@ function incrementarAciertos() {
     if (aciertos == 8){
         winAudio.play();
         clearInterval(cuentaRegresiva);
-        alert("Ganaste");
+        mostrarModal();
     }
 }
 
@@ -86,7 +86,7 @@ function contarTiempo() {
             clearInterval(cuentaRegresiva);
             bloquearTarjetas();
             loseAudio.play();
-            mostrarModalPerdiste();
+            mostrarModal();
         }
     },1000);
 }
@@ -98,11 +98,21 @@ function bloquearTarjetas(){
     }
 }
 
-function mostrarModalPerdiste() {
-    let aciertosModal = document.getElementById("aciertosModal");
-    let movimientosModal = document.getElementById("movimientosModal");
-    aciertosModal.innerHTML = aciertos;
-    movimientosModal.innerHTML = movimientos;
+function mostrarModal() {
+    let contenidoModal = '<div class="modal_container">';
+    if (aciertos == 8 ) {
+        contenidoModal += '<h2>Ganaste</h2>';
+        contenidoModal += '<img src="./assets/img/win.png" alt="">';
+        contenidoModal += '<h4>Solo demoraste: ' + (30-timer) + ' </h4>'; 
+    } else {
+        contenidoModal += '<h2>Perdiste</h2>';
+        contenidoModal += '<img src="./assets/img/lose.png" alt="">';
+        contenidoModal += '<h4>aciertos: ' + aciertos + ' </h4>';
+    }
+    contenidoModal += '<h4>movimientos: ' + movimientos + ' </h4>'; 
+    contenidoModal += '<a href="#" class="modalReiniciar" onclick="reiniciarJuego()">reiniciar juego</a>';
+    contenidoModal += '</div>';
+    modal.innerHTML= contenidoModal;
     modal.classList.add("modal--show");
 }
 
@@ -113,14 +123,9 @@ function reiniciarJuego() {
         botonesHtml[boton].innerHTML = ``;
     }
     tarjetasDestapadas = 0;
-    /*primerResultado = null;
-    segundoResultado = null;
-    tarjeta1 = null;
-    tarjeta2 = null;*/
     movimientos = 0;
     aciertos = 0;
     temporizador = false;
     timer = 30;
-    /*cuentaRegresiva = null;*/
     numeros.sort(()=>{return Math.random()-0.5});
 }
