@@ -19,19 +19,17 @@ body {
     background-size: cover;
     font-family: myFontMario;
     font-size: x-small;
-    color: #fff; 
+    color: #fff;
 }
 
-
 main {
-    width: 730px;
-    margin: 0 auto;
+    height: 95vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .section1{
-    margin-top: 5vh;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0 10px 10px;
     border-radius: 8px;
@@ -58,7 +56,6 @@ button:hover {
 }
 
 .section2{
-    margin-top: 5vh;
     background-color: rgba(255, 255, 255, 0.2);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -76,7 +73,7 @@ button:hover {
     box-sizing: border-box;
 }
 
-footer{
+footer {
     color: rgb(241, 106, 11);
     text-align: center;
     text-shadow: black 2px 2px 2px;
@@ -87,10 +84,14 @@ footer{
     height: 5vh;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
-    text-shadow: black 1px 1px 1px;
+    text-shadow: black 2px 2px 2px;
+}
+
+a:hover {
+    color: #f26250;
 }
 
 img {
