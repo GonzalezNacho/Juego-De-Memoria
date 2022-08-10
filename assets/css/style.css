@@ -16,23 +16,22 @@
 
 body {
     background: url(../img/fondo.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     font-family: myFontMario;
     font-size: x-small;
     color: #fff; 
 }
 
+
 main {
     width: 730px;
-    margin: 30px auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 }
 
 .section1{
+    margin-top: 5vh;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0 10px 10px;
     border-radius: 8px;
@@ -59,6 +58,7 @@ button:hover {
 }
 
 .section2{
+    margin-top: 5vh;
     background-color: rgba(255, 255, 255, 0.2);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -70,20 +70,21 @@ button:hover {
 .estadisticas{
     border: 1px solid white;
     height: 105px;
+    margin: 10% 2%;
     border-radius: 8px;
     padding: 8px 20px;
     box-sizing: border-box;
 }
 
 footer{
-    background-color: #111111bd;
     color: rgb(241, 106, 11);
     text-align: center;
     text-shadow: black 2px 2px 2px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 4%;
+    padding: 1%;
+    height: 5vh;
 }
 
 a{
@@ -121,6 +122,7 @@ img {
     width: 30%;
     background-color: #fff;
     border-radius: 6px;
+    box-shadow: black 8px 8px 12px;
 }
 
 .modal_container * {

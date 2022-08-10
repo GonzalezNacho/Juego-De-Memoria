@@ -103,7 +103,7 @@ function mostrarModal() {
     if (aciertos == 8 ) {
         contenidoModal += '<h2>Ganaste</h2>';
         contenidoModal += '<img src="./assets/img/win.png" alt="">';
-        contenidoModal += '<h4>Solo demoraste: ' + (30-timer) + ' </h4>'; 
+        contenidoModal += '<h4>Solo demoraste ' + (30-timer) + ' segundos</h4>'; 
     } else {
         contenidoModal += '<h2>Perdiste</h2>';
         contenidoModal += '<img src="./assets/img/lose.png" alt="">';
