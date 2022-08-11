@@ -36,11 +36,12 @@ main {
 }
 
 h1{
-    font-family: tittleFontMario;
+    font-family: myFontMario;
     font-size: xx-large;
     text-align: center;
-    color: red;
+    color: #f26250;
     text-shadow: black 2px 4px 1px ;
+    padding: 5%;
 }
 
 button {
